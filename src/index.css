@@ -1,0 +1,32 @@
+.nav .nav-link.active {
+    color: red;
+    font-weight: bold;
+}
+html,body, #root {
+    background: darkslategray;
+    margin: 0;
+    padding: 0;
+}
+.music-title{
+    font-size: large;
+    color: white;
+}
+.songInfo{
+    color:white;
+    font-size: 28px;
+}
+.songInfo-title{
+    color:white;
+    font-size: 55px;
+    font-weight: bold;
+}
+.cart-list{
+    color:white;
+    font-size: x-large;
+}
+.cart-table td {
+  font-size: 25px;
+}
+.cart-title{
+    color: white;
+}
