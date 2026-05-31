@@ -20,10 +20,21 @@ export default function CartList() {
     const [songInCart, setSongInCart] = useState<cart[]>(cartItem) // useState for cart array
 
 
-    const deleteSong = (idToDelete: string) => {
-    setSongInCart(cartItem.filter(s => s.id !== idToDelete)
-    )
-  }
+    const deleteSong = async (idToDelete: string) => {
+        console.log("Deleting ID:", idToDelete)
+    try {
+        const response = await fetch(
+            `https://69783c095b9c0aed1e885c68.mockapi.io/api/v1/cart/${idToDelete}`,
+            { method: "DELETE" }
+        )
+        if (!response.ok) {
+            throw new Error(response.statusText || "Failed to delete")
+        }
+        setSongInCart(prev => prev.filter(s => s.objectID !== idToDelete))
+    } catch (error: any) {
+        console.error("Delete failed:", error.message)
+    }
+}
 
     return ( // display for the client end
         <>
@@ -33,7 +44,7 @@ export default function CartList() {
                     <tbody className="cart-table">
                         {songInCart.map(song => ( //adds to new array in songInCart
                             <CartRows           //import from this component these items
-                                key={song.id}
+                                key={song.objectID}
                                 song={song}
                                 deleteSong={deleteSong}
                             />

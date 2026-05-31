@@ -13,7 +13,7 @@ const CartRows = ({ song, deleteSong }: cartRowsProps) => {
       <td>${song.song.price.toFixed(2)}</td>
       <td><button
         className="btn btn-danger"
-        onClick={() => deleteSong(song.id)}
+        onClick={() => deleteSong(song.objectID)}
       >
         Remove
       </button></td>
