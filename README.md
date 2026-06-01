@@ -15,8 +15,8 @@ Tech Stack
  • Vite
 
 What I Learned
-Building this project helped me get more comfortable working with REST APIs — specifically handling GET, POST, and DELETE requests, managing async data with loaders, and keeping UI state in sync with the backend.
+ Building this project helped me get more comfortable working with REST APIs — specifically handling GET, POST, and DELETE requests,          managing async data with loaders, and keeping UI state in sync with the backend.
 
 Getting Started
-npm install
-npm run dev
+ npm install
+ npm run dev
