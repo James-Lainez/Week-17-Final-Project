@@ -18,5 +18,5 @@ A React application that allows users to browse and purchase individual songs
 Building this project helped me get more comfortable working with REST APIs — specifically handling GET, POST, and DELETE requests, managing async data with loaders, and keeping UI state in sync with the backend.
 
 ## Getting Started
-    in terminal: npm install
+    npm install
     npm run dev
